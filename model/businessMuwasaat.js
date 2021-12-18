@@ -1,28 +1,28 @@
 const mongoose = require('mongoose');
 
 const businessMuwasaatSchema = mongoose.Schema({
-    sn: {type: Number, required: true},
+    sn: {type: String, required: true},
     trRef: {type: String},
     counsellor: [
         {
             prefix: {type: String},
             counsellorName: {type: String},
-            its: {type: Number},
-            mobileNo: {type: Number},
+            its: {type: String},
+            mobileNo: {type: String},
             grade: {type: String}
         }
     ],
     muminDetails: {
         prefix: {type: String},
         name: {type: String},
-        its: {type: Number},
+        its: {type: String},
         mauze: {type: String},
-        mobileNo: {type: Number},
+        mobileNo: {type: String},
     },
     caseDetails: {
         caseYear: {type: String},
         caseType: String,
-        enayatApproval: Boolean,
+        enayatApproval: String,
         caseStatus: String,
         businessName: String,
         keyNote: String

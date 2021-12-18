@@ -6,6 +6,7 @@ const path = require('path')
 const mongoose = require("mongoose");
 require('dotenv').config()
 const businessMuwasaatRoutes = require('./routes/businessMuwasaats')
+const resourcesRoutes = require('./routes/resources')
 
 const app = express();
 app.use(cors())
@@ -51,6 +52,7 @@ app.use((req, res, next) => {
 });
 
 app.use("/api/businessmuwasaat", businessMuwasaatRoutes)
+app.use("/api/resources", resourcesRoutes)
 app.use((req,res,next)=> {
   res.sendFile(path.join(__dirname ,"angular", "index.html"))
 })
